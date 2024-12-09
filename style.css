@@ -18,7 +18,7 @@ html {
 body {
     height: 2000px;
     font-family: 'Poppins';
-    background-color: rgb(240, 240, 240);
+    background-color: rgb(249, 249, 249);
 }
 
 /* Parallax */
@@ -161,7 +161,7 @@ body {
     gap: 5rem;
 }
 .about-container img {
-    max-height: 350px;
+    max-height: 320px;
     box-shadow: 2px 2px 7px rgba(0, 0, 0, .3);
 }
 
@@ -198,7 +198,7 @@ body {
 }
 
 .valueList {
-    margin: .5rem;
+    margin: 1rem 0;
     font-size: .9rem;
     display: flex;
     align-items: center;
@@ -223,16 +223,16 @@ body {
 }
 
 .value-1 {
-    background-color: #FF7043;
+    /* background-color: #FF7043; */
     border: 2px solid #FF7043;
 }
 .value-2 {
-    background-color: #66BB6A;
+    /* background-color: #66BB6A; */
     border: 2px solid #66BB6A;
     /* margin-left: 2rem; */
 }
 .value-3 {
-    background-color: #42A5F5;
+    /* background-color: #42A5F5; */
     border: 2px solid #42A5F5;
     /* margin-left: 4rem; */
 }
@@ -254,10 +254,13 @@ body {
     .navbar .navbar-nav {
         position: absolute;
         top: 102%;
-        right: -100%;
+        right: 0;
         background-color: #fff;
         width: 23rem;
         height: 100vh;
+        transform: scaleX(0);
+        transform-origin: right;
+        box-shadow: -1px 2px 5px rgba(0, 0, 0, .3);
         transition: .4s;
     }
 
@@ -276,7 +279,26 @@ body {
     }
 
     .navbar .navbar-nav.active {
-        right: 0;
+        transform: scaleX(100%);
+    }
+
+    .about-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .about-container img {
+        max-height: 400px;
+    }
+
+    .about-desc p {
+        font-size: 1.1rem;
+    }
+
+
+    .value-container {
+        flex-direction: column;
+        gap: 0;
     }
 }
 

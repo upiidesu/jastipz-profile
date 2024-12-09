@@ -123,7 +123,6 @@ body {
 .navbar .navbar-nav a::after {
     content: '';
     display: block;
-    padding-bottom: .3rem;
     border-bottom: .05rem solid var(--primary);
     transform: scaleX(0);
     transition: .2s linear;
@@ -267,7 +266,7 @@ body {
     .navbar .navbar-nav a {
         color: var(--text);
         display: block;
-        margin: 1.5rem;
+        margin: .8rem 1.2rem;
         padding: .8rem;
         font-size: 1.3rem;
     }

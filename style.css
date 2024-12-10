@@ -469,6 +469,126 @@ body {
 }
 
 
+footer {
+    background-color: #f1f1f1;
+    padding: 2rem 6% 0;
+}
+
+footer .container {
+    min-width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+footer .container .footer-content {
+    display: flex;
+    gap: 3rem;
+    position: relative;
+}
+footer .container .footer-content::after {
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: var(--text);
+    position: absolute;
+    bottom: 0;
+}
+
+footer .container .description {
+    width: 50%;
+    padding-right: 2rem;
+}
+footer .container .description img {
+    height: 4rem;
+}
+footer .container .description p {
+    font-family: 'Poppins', sans-serif;
+    font-size: .9rem;
+    text-align: justify;
+    margin-top: 1rem;
+}
+footer .container .description .noHp {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+footer .container .content {
+    margin-left: auto;
+    width: 50%;
+}
+footer .container .content .links {
+    display: flex;
+    justify-content: space-between;
+}
+footer .container .content .links .sitemap,
+footer .container .content .links .other,
+footer .container .content .links .sitemap,
+footer .container .content .links .follow {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+    gap: .6rem;
+}
+footer .container .content .links h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0;
+}
+footer .container .content .links a {
+    text-decoration: none;
+    color: var(--text);
+    font-size: 1rem;
+}
+
+footer .container .content .links .follow .sosmed-logo {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 1.6rem;
+}
+footer .container .content .links .follow .sosmed-logo a {
+    width: 2.2rem;
+    height: 2.2rem;
+    font-size: 1.5rem;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s;
+}
+footer .container .content .links .follow .sosmed-logo a:hover {
+    color: var(--primary);
+}
+
+footer .container .copyright {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    padding: 2rem 0 .5rem;
+}
+footer .container .copyright h3 {
+    font-size: .8rem;
+    margin-right: 1rem;
+    margin-bottom: 0;
+    font-weight: 500;
+}
+footer .container .copyright a {
+    text-decoration: none;
+    color: var(--text);
+    font-size: .8rem;
+    margin: 0 .5rem;
+}
+footer .container .copyright span {
+    font-size: .8rem;
+    font-weight: 200;
+}
+
+
 
 
 /* <====================== Query =====================> */
@@ -605,6 +725,31 @@ body {
         font-size: .9rem;
         margin: .3rem;
     }
+
+
+    footer .container {
+        width: 100%;
+    }
+    footer .footer-content {
+        flex-wrap: wrap;
+        gap: 2rem !important;
+    }
+    footer .footer-content .description {
+        width: 100%;
+    }
+    footer .footer-content .content {
+        margin-left: 0;
+        width: 100%;
+    }
+    footer .container .content .links {
+        justify-content: flex-start;
+        gap: 2.5rem;
+    }
+
+    footer .container .description .noHp {
+        justify-content: flex-start;
+    }
+
 }
 
 @media (max-width: 540px) {
@@ -669,5 +814,20 @@ body {
     .contact-form {
         min-width: 100%;
         gap: .8rem;
+    }
+
+
+    footer .footer-content .description p {
+        font-size: 1.1rem !important;
+        font-weight: 500;
+    }
+
+    footer .copyright {
+        flex-direction: column;
+        margin-top: 1rem !important;
+    }
+
+    footer .copyright h3, footer .copyright a {
+        font-size: 1rem !important;
     }
 }

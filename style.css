@@ -415,9 +415,9 @@ body {
 
 .form-container {
     display: flex;
-    /* background-color: blue; */
     justify-content: center;
     align-items: center;
+    margin: 5rem 0;
 }
 
 .contact-form {
@@ -426,7 +426,7 @@ body {
     align-items: center;
     padding: 2rem;
     background-color: rgba(204, 204, 204, 0.1);
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(3px);
     border: 2px solid rgba(255, 255, 255, 0.875);
     border-radius: 8px;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, .2);
@@ -513,6 +513,17 @@ body {
         transform: scaleX(100%);
     }
 
+    .about {
+        padding: 7rem 6%;
+    }
+
+    .services-container,
+    .testi-container,
+    .team-container,
+    .contact-container {
+        padding: 7rem 6%;
+    }
+
 
     .about-text,
     .services-text,
@@ -592,6 +603,7 @@ body {
 
     .contact-message {
         font-size: .9rem;
+        margin: .3rem;
     }
 }
 

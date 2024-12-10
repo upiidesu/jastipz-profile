@@ -60,3 +60,43 @@ document.addEventListener('click', function(e) {
         navbarNav.classList.remove('active');
     }
 });
+
+
+/* ==================== EMAIL JS ==================== */
+const contactForm = document.getElementById("contact-form");
+const contactMessage = document.getElementById("contact-message");
+
+const sendEmail = (e) => {
+    e.preventDefault();
+
+    //serviceID - templateID - #form - publicKey
+    emailjs
+        .sendForm(
+            "service_fb1spgf",
+            "template_ajzqxw7",
+            "#contact-form",
+            "EJTa5kpXMO05E89Vd"
+        )
+
+        .then(
+            () => {
+                // Show sent message
+                contactMessage.textContent = "Message sent succesfully!! ✔";
+
+                // Remove message after 5s
+                setTimeout(() => {
+                    contactMessage.textContent = "";
+                }, 5000);
+
+                // Clear input fields
+                contactForm.reset();
+            },
+            () => {
+                // Error message
+                contactMessage.textContent =
+                    "Message not sent (service error)!! ✖";
+            }
+        );
+};
+
+contactForm.addEventListener("submit", sendEmail);

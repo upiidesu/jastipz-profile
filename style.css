@@ -17,7 +17,7 @@ html {
 }
 
 body {
-    height: 4000px;
+    /* height: 4000px; */
     font-family: 'Poppins';
 }
 
@@ -413,6 +413,61 @@ body {
     background-image: url(img/4.jpg);
 }
 
+.form-container {
+    display: flex;
+    /* background-color: blue; */
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background-color: rgba(204, 204, 204, 0.1);
+    backdrop-filter: blur(8px);
+    border: 2px solid rgba(255, 255, 255, 0.875);
+    border-radius: 8px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, .2);
+    gap: .5rem;
+}
+
+.contact-group {
+    display: flex;
+    gap: 1rem;
+}
+.contact-form input,
+.contact-form textarea {
+    padding: .5rem .8rem;
+    border-radius: 8px;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, .1);
+    border: none;
+    font-size: 1rem;
+}
+
+.contact-form textarea {
+    min-width: 100%;
+    height: 7rem;
+    resize: none;
+    font-family: 'Poppins';
+}
+
+.contact-button {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: .6rem 2rem;
+    /* margin-top: 1rem; */
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-message {
+    font-size: .7rem;
+    margin-right: auto;
+    padding: 0 .5rem;
+}
+
 
 
 
@@ -457,6 +512,16 @@ body {
     .navbar .navbar-nav.active {
         transform: scaleX(100%);
     }
+
+
+    .about-text,
+    .services-text,
+    .testi-text,
+    .team-text,
+    .contact-text {
+        font-size: 1.1rem;
+    }
+
 
     .about-container {
         flex-direction: column;
@@ -503,15 +568,30 @@ body {
     }
 
     .profile-name {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
     .team-profile span {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
 
     .profile-sosmed {
-        font-size: 2rem;
+        font-size: 1.7rem;
         margin-bottom: 3rem;
+    }
+
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 1.1rem;
+        padding: .8rem;
+    }
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder {
+        font-size: 1rem;
+    }
+
+    .contact-message {
+        font-size: .9rem;
     }
 }
 
@@ -532,6 +612,7 @@ body {
     .navbar-nav {
         font-size: 1.4rem;
     }
+
 
     .services-list {
         grid-template-columns: repeat(1, 1fr);
@@ -565,5 +646,16 @@ body {
     }
     .testi-list.reverse {
         margin-bottom: 0;
+    }
+
+
+    .contact-group {
+        flex-direction: column;
+        min-width: 100%;
+        gap: .8rem;
+    }
+    .contact-form {
+        min-width: 100%;
+        gap: .8rem;
     }
 }

@@ -155,7 +155,8 @@ body {
 }
 .about-title,
 .services-title,
-.testi-title {
+.testi-title,
+.team-title {
     text-align: center;
     font-size: 2rem;
     font-weight: 600;
@@ -163,7 +164,8 @@ body {
 }
 .about-title::after,
 .services-title::after,
-.testi-title::after {
+.testi-title::after,
+.team-title::after {
     content: '';
     display: block;
     min-width: 3rem;
@@ -175,7 +177,8 @@ body {
 
 .about-text,
 .services-text,
-.testi-text {
+.testi-text,
+.team-text {
     text-align: center;
     font-size: .9rem;
     font-weight: 300;
@@ -203,7 +206,8 @@ body {
 
 /* <=========== COMPANY VALUE ==========> */
 .services,
-.testi {
+.testi,
+.team {
     background-image: url(img/5.jpg);
     background-position: center;
     background-size: cover;
@@ -212,8 +216,9 @@ body {
 }
 
 .services-container,
-.testi-container {
-    padding: 5rem 6%;
+.testi-container,
+.team-container {
+    padding: 5rem 6% 7rem;
     background-color: rgba(255, 255, 255, .8);
     min-height: max-content;
 }
@@ -307,7 +312,7 @@ body {
 
 /* <=========== TESTIMONIALS ==========> */
 .testi {
-    background-image: url(img/2.jpg);
+    background-image: url(img/1.jpg);
 }
 
 .testi-list {
@@ -324,10 +329,15 @@ body {
     border-radius: 50%;
     border: 5px solid white;
     box-shadow: 1px 1px 7px rgba(0, 0, 0, .2);
+    transition: all .3s;
 }
+.testi-profile img:hover {
+    transform: scale(1.02);
+}
+
 .testi-name {
     text-align: center;
-    color: var(--black);
+    color: #282828;
     font-weight: 600;
     font-size: 1.2rem;
     margin-top: .5rem;
@@ -338,9 +348,59 @@ body {
     padding: 2rem 3rem;
     border-radius: 4px;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, .2);
+    transform: translateY(-1.2rem);
 }
 
 
+/* <=========== TEAM ==========> */
+.team {
+    background-image: url(img/3.jpg);
+}
+
+.team-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.team-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #373737
+}
+
+.team-profile img {
+    width: 200px;
+    border-radius: 3px;
+    transform: translateY(0);
+    transition: all .3s;
+}
+.team-profile img:hover {
+    transform: translateY(-.2rem);
+}
+
+.profile-name {
+    font-size: .9rem;
+    margin-top: 1.2rem;
+}
+.team-profile span {
+    font-size: .8rem;
+}
+
+.profile-sosmed {
+    margin-top: .8rem;
+    font-size: 1.3rem;
+}
+.profile-sosmed a {
+    color: #373737;
+    transition: all .2s;
+}
+.profile-sosmed a:hover {
+    color: var(--primary);
+}
 
 
 
@@ -419,7 +479,28 @@ body {
 
     .testi-desc {
         padding: 1rem 2rem;
-        font-size: .9rem;
+        font-size: 1rem;
+    }
+
+
+    .team-content {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
+    }
+    .team-profile img {
+        width: 280px;
+    }
+
+    .profile-name {
+        font-size: 1.8rem;
+    }
+    .team-profile span {
+        font-size: 1.3rem;
+    }
+
+    .profile-sosmed {
+        font-size: 2rem;
+        margin-bottom: 3rem;
     }
 }
 

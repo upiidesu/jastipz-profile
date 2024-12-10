@@ -17,7 +17,7 @@ html {
 }
 
 body {
-    height: 2000px;
+    height: 4000px;
     font-family: 'Poppins';
 }
 
@@ -143,6 +143,10 @@ body {
     display: none;
 }
 
+.active-link {
+    color: var(--primary) !important;
+}
+
 
 /* <=========== ABOUT US ==========> */
 .about,
@@ -163,7 +167,7 @@ body {
     min-width: 3rem;
     max-width: fit-content;
     margin: .5rem auto;
-    border-bottom: 2px solid #F1592A;
+    border-bottom: 2px solid var(--primary);
     border-radius: 2rem;
 }
 
@@ -230,8 +234,8 @@ body {
     font-size: 1.5rem;
 }
 .service i::before {
-    background-color: #F1592A;
-    border: 2px solid #F1592A;
+    background-color: var(--primary);
+    border: 2px solid var(--primary);
     padding: .65rem;
     border-radius: 50%;
     color: var(--white);
@@ -239,7 +243,7 @@ body {
 }
 .service:hover i::before {
     background-color: var(--white);
-    color: #F1592A;
+    color: var(--primary);
 }
 
 .service-desc h4 {
@@ -251,6 +255,49 @@ body {
     font-size: .9rem;
 }
 
+
+/* <=========== VIEW SITE ==========> */
+.view {
+    background-image: url(img/1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.view-container {
+    background-color: rgba(0, 0, 0, .7);
+    padding: 4rem 6%;
+    display: flex;
+    color: var(--white);
+    justify-content: center;
+    align-items: center;
+}
+
+.view-title {
+    margin-bottom: 1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.view-btn {
+    margin-left: auto;
+    margin-right: 5rem;
+    color: var(--white);
+    padding: .6rem 2.5rem;
+    border: 2px solid var(--white);
+    border-radius: 4px;
+    text-transform: uppercase;
+    transition: all .4s;
+}
+.view-btn:hover {
+    background-color: var(--primary);
+    border: 2px solid var(--primary);
+}
+
+.view-btn i {
+    margin-left: .5rem;
+    font-size: 1.2rem;
+}
 
 
 /* <====================== Query =====================> */
@@ -312,6 +359,10 @@ body {
         grid-template-columns: repeat(2, 1fr);
         gap: 3rem;
     }
+
+    .view-content {
+        width: 60%;
+    }
 }
 
 @media (max-width: 540px) {
@@ -340,5 +391,20 @@ body {
 
     .service-desc p {
         font-size: 1rem;
+    }
+
+    .view-container {
+        flex-direction: column;
+        padding: 2rem 6%;
+    }
+
+    .view-content {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .view-btn {
+        margin: auto;
     }
 }

@@ -156,7 +156,8 @@ body {
 .about-title,
 .services-title,
 .testi-title,
-.team-title {
+.team-title,
+.contact-title {
     text-align: center;
     font-size: 2rem;
     font-weight: 600;
@@ -165,7 +166,8 @@ body {
 .about-title::after,
 .services-title::after,
 .testi-title::after,
-.team-title::after {
+.team-title::after,
+.contact-title::after {
     content: '';
     display: block;
     min-width: 3rem;
@@ -178,7 +180,8 @@ body {
 .about-text,
 .services-text,
 .testi-text,
-.team-text {
+.team-text,
+.contact-text {
     text-align: center;
     font-size: .9rem;
     font-weight: 300;
@@ -207,7 +210,8 @@ body {
 /* <=========== COMPANY VALUE ==========> */
 .services,
 .testi,
-.team {
+.team,
+.contact {
     background-image: url(img/5.jpg);
     background-position: center;
     background-size: cover;
@@ -217,7 +221,8 @@ body {
 
 .services-container,
 .testi-container,
-.team-container {
+.team-container,
+.contact-container {
     padding: 5rem 6% 7rem;
     background-color: rgba(255, 255, 255, .8);
     min-height: max-content;
@@ -403,6 +408,12 @@ body {
 }
 
 
+/* <=========== CONTACT ==========> */
+.contact {
+    background-image: url(img/4.jpg);
+}
+
+
 
 
 /* <====================== Query =====================> */
@@ -488,7 +499,7 @@ body {
         gap: 1rem;
     }
     .team-profile img {
-        width: 280px;
+        width: 260px;
     }
 
     .profile-name {
@@ -555,8 +566,4 @@ body {
     .testi-list.reverse {
         margin-bottom: 0;
     }
-    .testi-profile img {
-        width: 120px;
-    }
-
 }

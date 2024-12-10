@@ -154,14 +154,16 @@ body {
     padding: 5rem 6%;
 }
 .about-title,
-.services-title {
+.services-title,
+.testi-title {
     text-align: center;
     font-size: 2rem;
     font-weight: 600;
     margin-bottom: 1rem;
 }
 .about-title::after,
-.services-title::after {
+.services-title::after,
+.testi-title::after {
     content: '';
     display: block;
     min-width: 3rem;
@@ -172,7 +174,8 @@ body {
 }
 
 .about-text,
-.services-text {
+.services-text,
+.testi-text {
     text-align: center;
     font-size: .9rem;
     font-weight: 300;
@@ -199,7 +202,8 @@ body {
 }
 
 /* <=========== COMPANY VALUE ==========> */
-.services {
+.services,
+.testi {
     background-image: url(img/5.jpg);
     background-position: center;
     background-size: cover;
@@ -207,7 +211,8 @@ body {
     padding: 0;
 }
 
-.services-container {
+.services-container,
+.testi-container {
     padding: 5rem 6%;
     background-color: rgba(255, 255, 255, .8);
     min-height: max-content;
@@ -300,6 +305,46 @@ body {
 }
 
 
+/* <=========== TESTIMONIALS ==========> */
+.testi {
+    background-image: url(img/2.jpg);
+}
+
+.testi-list {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+.testi-list.reverse {
+    flex-direction: row-reverse;
+}
+
+.testi-profile img {
+    width: 200px;
+    border-radius: 50%;
+    border: 5px solid white;
+    box-shadow: 1px 1px 7px rgba(0, 0, 0, .2);
+}
+.testi-name {
+    text-align: center;
+    color: var(--black);
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-top: .5rem;
+}
+
+.testi-desc {
+    background-color: #fff;
+    padding: 2rem 3rem;
+    border-radius: 4px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, .2);
+}
+
+
+
+
+
+
 /* <====================== Query =====================> */
 @media (max-width:768px) {
     html {
@@ -363,6 +408,19 @@ body {
     .view-content {
         width: 60%;
     }
+
+    .testi-list {
+        margin-bottom: 1rem;
+        gap: 2rem;
+    }
+    .testi-profile img {
+        width: 150px;
+    }
+
+    .testi-desc {
+        padding: 1rem 2rem;
+        font-size: .9rem;
+    }
 }
 
 @media (max-width: 540px) {
@@ -407,4 +465,17 @@ body {
     .view-btn {
         margin: auto;
     }
+
+
+    .testi-list {
+        margin-bottom: 3rem;
+        gap: 2rem;
+    }
+    .testi-list.reverse {
+        margin-bottom: 0;
+    }
+    .testi-profile img {
+        width: 120px;
+    }
+
 }

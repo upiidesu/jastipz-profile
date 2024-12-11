@@ -236,6 +236,7 @@ body {
     margin: 0 auto;
     overflow-x: hidden;
     box-sizing: border-box;
+    padding: 0 .6rem;
 }
 
 .service {
@@ -470,8 +471,10 @@ body {
 
 
 footer {
-    background-color: #f1f1f1;
+    background-color: rgb(241, 241, 241);
+    backdrop-filter: blur(5px);
     padding: 2rem 6% 0;
+    box-shadow: 0 0px 7px rgba(0, 0, 0, .1);
 }
 
 footer .container {

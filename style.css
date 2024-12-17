@@ -66,26 +66,50 @@ body {
 .hero-desc {
     font-size: 1.5rem;
     color: rgba(255, 255, 255, .8);
+    margin-bottom: 4rem;
+}
+
+.btn {
+    display: flex;
+    gap: 2rem;
+    opacity: 0;
+    animation: fade 1s 1.5s forwards;
+}
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .hero-btn {
-    margin-top: 4rem;
-    padding: .4rem 2.2rem;
+    padding: .4rem 2rem;
     text-transform: uppercase;
     font-weight: 500;
-    font-size: 1rem;
+    font-size: .9rem;
     letter-spacing: 2px;
     border-radius: .25rem;
     cursor: pointer;
     text-decoration: none;
-    background-color: var(--primary);
     color: var(--white);
+    background-color: var(--primary);
     border: 2px solid var(--primary);
     transition: all .2s;
 }
 .hero-btn:hover {
     background-color: transparent;
     border: 2px solid var(--white);
+}
+
+.btn2 {
+    background-color: transparent;
+    border: 2px solid var(--white);
+}
+.btn2:hover {
+    background-color: var(--primary);
+    border: 2px solid var(--primary);
 }
 
 
@@ -589,6 +613,26 @@ footer .container .copyright a {
 footer .container .copyright span {
     font-size: .8rem;
     font-weight: 200;
+}
+
+
+/* <================= WHATSAPP ICON ================> */
+.wa-icon {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 9999;
+}
+
+.wa-btn {
+    background-color: transparent;
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: var(--black);
+    transition: all .2s;
+}
+.wa-btn:hover {
+    color: var(--primary);
 }
 
 

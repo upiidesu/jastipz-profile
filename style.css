@@ -214,7 +214,7 @@ body {
 
 .about-container {
     display: flex;
-    gap: 5rem;
+    gap: 4rem;
 }
 .about-container img {
     max-height: 320px;
@@ -323,7 +323,7 @@ body {
     margin-left: auto;
     margin-right: 5rem;
     color: var(--white);
-    padding: .6rem 2.5rem;
+    padding: .5rem 2.4rem;
     border: 2px solid var(--white);
     border-radius: 4px;
     text-transform: uppercase;
@@ -629,10 +629,11 @@ footer .container .copyright span {
     font-size: 2.5rem;
     cursor: pointer;
     color: var(--black);
-    transition: all .2s;
+    transition: all .3s;
 }
 .wa-btn:hover {
     color: var(--primary);
+    font-size: 2.55rem;
 }
 
 
@@ -797,11 +798,22 @@ footer .container .copyright span {
         justify-content: flex-start;
     }
 
+
+    .wa-icon {
+        bottom: 2rem;
+        right: 1.8rem;
+    }
+
 }
 
 @media (max-width: 540px) {
     html {
         font-size: 65%;
+    }
+
+    .hero-btn {
+        padding: .5rem 2.2rem;
+        font-size: 1rem;
     }
 
     .navbar-brand img {
